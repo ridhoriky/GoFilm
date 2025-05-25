@@ -6,13 +6,13 @@ import { AuthContextProvider } from "./context/AuthContext.jsx";
 import { Footer } from "./components/Footer.jsx";
 import { LikeProvider } from "./context/LikeContext.jsx";
 import ProtectedRoute from "./components/ProtectedRoute";
-const SignUp = React.lazy(() => import("./pages/SignUp.jsx"));
-const Login = React.lazy(() => import("./pages/Login.jsx"));
-const Wishlist = React.lazy(() => import("./pages/Wishlist.jsx"));
-const Movie = React.lazy(() => import("./pages/Movie.jsx"));
-const TvShow = React.lazy(() => import("./pages/TvShow.jsx"));
-const Search = React.lazy(() => import("./pages/Search.jsx"));
-const Detail = React.lazy(() => import("./pages/Detail.jsx"));
+import Login from "./pages/Login.jsx";
+import SignUp from "./pages/SignUp.jsx";
+import Wishlist from "./pages/Wishlist.jsx";
+import Movie from "./pages/Movie.jsx";
+import TvShow from "./pages/TvShow.jsx";
+import Search from "./pages/Search.jsx";
+import Detail from "./pages/Detail.jsx";
 
 const App = () => {
   return (
@@ -32,8 +32,8 @@ const App = () => {
                 </ProtectedRoute>
               }
             />
-            <Route path="/movie/:id" element={<Movie />} />
-            <Route path="/tvshow/:id" element={<TvShow />} />
+            <Route path="/movie" element={<Movie />} />
+            <Route path="/tvshow" element={<TvShow />} />
             <Route path="/search" element={<Search />} />
             <Route path="/detail/:id" element={<Detail />} />
           </Routes>
